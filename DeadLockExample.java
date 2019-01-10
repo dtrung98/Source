@@ -1,4 +1,4 @@
-package com.example.nguyenhuutu.convenientmenu;
+package com.ldt.something;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class Main2Activity extends AppCompatActivity {
-    private static final String TAG ="Main2Activity";
+public class MainActivity extends AppCompatActivity {
+    private static final String TAG ="MainActivity";
     /*
     Bước 1: Tạo một thread lặp (không chết khi run xong)
     Bước 2: Tạo hai thể hiện của thread đó, main sẽ chờ tới khi cả 2 thread sẵn sàng thì bắt đầu thực hiện bước 3
