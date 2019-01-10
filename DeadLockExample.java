@@ -13,11 +13,11 @@ public class Main2Activity extends AppCompatActivity {
     Bước 1: Tạo một thread lặp (không chết khi run xong)
     Bước 2: Tạo hai thể hiện của thread đó, main sẽ chờ tới khi cả 2 thread sẵn sàng thì bắt đầu thực hiện bước 3
     Bước 3: Mỗi thread sẽ được post 1 runnable thông qua handler của mỗi cái để thực hiện một công việc.
-      - Thread A tiến hành lock o1 và sau 50ms sẽ chờ o2 sẵn sàng, khi o2 sẵng sàng thì in ra o1 - o2 kết thúc công việc.
-      - Thread B tiến hành lock o2 và sau 50ms sẽ chờ o1 sẵng sàng, khi o1 sẵng sàng thì in ra o2 - o1 kết thúc công việc.
+      - Thread A tiến hành lock value1 và sau 50ms sẽ chờ value2 sẵn sàng, khi o2 sẵng sàng thì in ra value1 - value2 kết thúc công việc.
+      - Thread B tiến hành lock value2 và sau 50ms sẽ chờ value1 sẵng sàng, khi value1 sẵng sàng thì in ra value2 - value1 kết thúc công việc.
 
-     Do Thread A đã lock 01 và Thread B đã lock O2 nên cả 2 thread sẽ chờ nhau mà không bao giờ kết thúc công việc.
-     Main vẫn hoạt động bình thường do cả hai công việc đều thực hiện ngầm
+     Do Thread A đã lock value1 và Thread B đã lock value2 nên cả 2 thread sẽ chờ nhau mà không bao giờ kết thúc công việc.
+     Main vẫn hoạt động bình thường do cả hai công việc đều thực hiện ở thread khác.
      */
 
     /*
